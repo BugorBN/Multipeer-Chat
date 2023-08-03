@@ -11,6 +11,11 @@
 		CC91E5B92A7C1347007810E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5B82A7C1347007810E8 /* ContentView.swift */; };
 		CC91E5BB2A7C1348007810E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC91E5BA2A7C1348007810E8 /* Assets.xcassets */; };
 		CC91E5BE2A7C1348007810E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC91E5BD2A7C1348007810E8 /* Preview Assets.xcassets */; };
+		CC91E5C72A7C377E007810E8 /* PeerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5C62A7C377E007810E8 /* PeerDevice.swift */; };
+		CC91E5C92A7C3794007810E8 /* PermitionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5C82A7C3794007810E8 /* PermitionRequest.swift */; };
+		CC91E5CD2A7C37CC007810E8 /* DeviceFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5CC2A7C37CC007810E8 /* DeviceFinderViewModel.swift */; };
+		CC91E5D02A7C38C2007810E8 /* Chat in Frameworks */ = {isa = PBXBuildFile; productRef = CC91E5CF2A7C38C2007810E8 /* Chat */; };
+		CC91E5D22A7C38F9007810E8 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5D12A7C38F9007810E8 /* MessengerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		CC91E5B82A7C1347007810E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC91E5BA2A7C1348007810E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC91E5BD2A7C1348007810E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC91E5C42A7C17F3007810E8 /* Multipeer-Chat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Multipeer-Chat-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CC91E5C62A7C377E007810E8 /* PeerDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerDevice.swift; sourceTree = "<group>"; };
+		CC91E5C82A7C3794007810E8 /* PermitionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermitionRequest.swift; sourceTree = "<group>"; };
+		CC91E5CC2A7C37CC007810E8 /* DeviceFinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFinderViewModel.swift; sourceTree = "<group>"; };
+		CC91E5D12A7C38F9007810E8 /* MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC91E5D02A7C38C2007810E8 /* Chat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				CC91E5B62A7C1347007810E8 /* Multipeer_ChatApp.swift */,
-				CC91E5B82A7C1347007810E8 /* ContentView.swift */,
+				CC91E5C52A7C3777007810E8 /* Models */,
+				CC91E5CA2A7C37A4007810E8 /* Views */,
+				CC91E5CB2A7C37BE007810E8 /* ViewModels */,
+				CC91E5C42A7C17F3007810E8 /* Multipeer-Chat-Info.plist */,
 				CC91E5BA2A7C1348007810E8 /* Assets.xcassets */,
 				CC91E5BC2A7C1348007810E8 /* Preview Content */,
 			);
@@ -65,6 +79,32 @@
 				CC91E5BD2A7C1348007810E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC91E5C52A7C3777007810E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC91E5C62A7C377E007810E8 /* PeerDevice.swift */,
+				CC91E5C82A7C3794007810E8 /* PermitionRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC91E5CA2A7C37A4007810E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC91E5B82A7C1347007810E8 /* ContentView.swift */,
+				CC91E5D12A7C38F9007810E8 /* MessengerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC91E5CB2A7C37BE007810E8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CC91E5CC2A7C37CC007810E8 /* DeviceFinderViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,9 @@
 			dependencies = (
 			);
 			name = "Multipeer Chat";
+			packageProductDependencies = (
+				CC91E5CF2A7C38C2007810E8 /* Chat */,
+			);
 			productName = "Multipeer Chat";
 			productReference = CC91E5B32A7C1347007810E8 /* Multipeer Chat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = CC91E5AA2A7C1347007810E8;
+			packageReferences = (
+				CC91E5CE2A7C38C2007810E8 /* XCRemoteSwiftPackageReference "Chat" */,
+			);
 			productRefGroup = CC91E5B42A7C1347007810E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC91E5D22A7C38F9007810E8 /* MessengerView.swift in Sources */,
+				CC91E5CD2A7C37CC007810E8 /* DeviceFinderViewModel.swift in Sources */,
 				CC91E5B92A7C1347007810E8 /* ContentView.swift in Sources */,
+				CC91E5C92A7C3794007810E8 /* PermitionRequest.swift in Sources */,
 				CC91E5B72A7C1347007810E8 /* Multipeer_ChatApp.swift in Sources */,
+				CC91E5C72A7C377E007810E8 /* PeerDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,13 +317,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Multipeer Chat/Preview Content\"";
+				DEVELOPMENT_TEAM = APYL42WZVK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Multipeer-Chat-Info.plist";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "The app will ask your permission to discover nearby devices for chatting with them";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,13 +349,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Multipeer Chat/Preview Content\"";
+				DEVELOPMENT_TEAM = APYL42WZVK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Multipeer-Chat-Info.plist";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "The app will ask your permission to discover nearby devices for chatting with them";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC91E5CE2A7C38C2007810E8 /* XCRemoteSwiftPackageReference "Chat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Chat";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC91E5CF2A7C38C2007810E8 /* Chat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC91E5CE2A7C38C2007810E8 /* XCRemoteSwiftPackageReference "Chat" */;
+			productName = Chat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC91E5AB2A7C1347007810E8 /* Project object */;
 }
