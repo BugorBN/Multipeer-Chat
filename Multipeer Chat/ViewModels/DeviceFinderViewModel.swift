@@ -6,7 +6,8 @@
 //
 
 import MultipeerConnectivity
-import Chat
+import SwiftyChat
+import Combine
 
 class DeviceFinderViewModel: NSObject, ObservableObject {
     private let advertiser: MCNearbyServiceAdvertiser
@@ -27,24 +28,24 @@ class DeviceFinderViewModel: NSObject, ObservableObject {
             isAdvertised ? advertiser.startAdvertisingPeer() : advertiser.stopAdvertisingPeer()
         }
     }
-    
-    @Published var messages: [Message] = []
-    
-    private let currentUser = User(id: UUID().uuidString, name: UIDevice.current.name, avatarURL: nil, isCurrentUser: true)
-    
-    func send(draft: DraftMessage) {
-        guard let data = draft.text.data(using: .utf8) else {
+
+    @Published var messages: [MockMessages.ChatMessageItem] = []
+    let messagePublisher = PassthroughSubject<MockMessages.ChatMessageItem, Never>()
+    var subscriptions = Set<AnyCancellable>()
+
+    func send(draft: ChatMessageKind) {
+        guard case let .text(string) = draft else {
+            return
+        }
+        
+        guard let data = string.data(using: .utf8) else {
             return
         }
         
         try? session.send(data, toPeers: [joinedPeer.last!.peerId], with: .reliable)
-        
-        messages.append(
-            Message(
-                id: draft.id ?? "",
-                user: currentUser,
-                text: draft.text
-            )
+
+        messagePublisher.send(
+            .init(user: MockMessages.sender, messageKind: draft, isSender: true)
         )
     }
     
@@ -67,6 +68,13 @@ class DeviceFinderViewModel: NSObject, ObservableObject {
         advertiser.delegate = self
         browser.delegate = self
         session.delegate = self
+        
+        messagePublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                self?.messages.append($0)
+            }
+            .store(in: &subscriptions)
     }
 
     func startBrowsing() {
@@ -134,12 +142,8 @@ extension DeviceFinderViewModel: MCSessionDelegate {
             return
         }
 
-        messages.append(
-            Message(
-                id: UUID().uuidString,
-                user: User(id: last.id.uuidString, name: last.peerId.displayName, avatarURL: nil, isCurrentUser: false),
-                text: message
-            )
+        messagePublisher.send(
+            .init(user: MockMessages.sender, messageKind: .text(message), isSender: false)
         )
     }
     

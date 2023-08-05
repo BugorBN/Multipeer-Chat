@@ -14,8 +14,8 @@
 		CC91E5C72A7C377E007810E8 /* PeerDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5C62A7C377E007810E8 /* PeerDevice.swift */; };
 		CC91E5C92A7C3794007810E8 /* PermitionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5C82A7C3794007810E8 /* PermitionRequest.swift */; };
 		CC91E5CD2A7C37CC007810E8 /* DeviceFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5CC2A7C37CC007810E8 /* DeviceFinderViewModel.swift */; };
-		CC91E5D02A7C38C2007810E8 /* Chat in Frameworks */ = {isa = PBXBuildFile; productRef = CC91E5CF2A7C38C2007810E8 /* Chat */; };
 		CC91E5D22A7C38F9007810E8 /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91E5D12A7C38F9007810E8 /* MessengerView.swift */; };
+		CC91E5D52A7E5E3B007810E8 /* SwiftyChat in Frameworks */ = {isa = PBXBuildFile; productRef = CC91E5D42A7E5E3B007810E8 /* SwiftyChat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC91E5D02A7C38C2007810E8 /* Chat in Frameworks */,
+				CC91E5D52A7E5E3B007810E8 /* SwiftyChat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 			);
 			name = "Multipeer Chat";
 			packageProductDependencies = (
-				CC91E5CF2A7C38C2007810E8 /* Chat */,
+				CC91E5D42A7E5E3B007810E8 /* SwiftyChat */,
 			);
 			productName = "Multipeer Chat";
 			productReference = CC91E5B32A7C1347007810E8 /* Multipeer Chat.app */;
@@ -155,7 +155,7 @@
 			);
 			mainGroup = CC91E5AA2A7C1347007810E8;
 			packageReferences = (
-				CC91E5CE2A7C38C2007810E8 /* XCRemoteSwiftPackageReference "Chat" */,
+				CC91E5D32A7E5E3B007810E8 /* XCRemoteSwiftPackageReference "SwiftyChat" */,
 			);
 			productRefGroup = CC91E5B42A7C1347007810E8 /* Products */;
 			projectDirPath = "";
@@ -397,21 +397,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CC91E5CE2A7C38C2007810E8 /* XCRemoteSwiftPackageReference "Chat" */ = {
+		CC91E5D32A7E5E3B007810E8 /* XCRemoteSwiftPackageReference "SwiftyChat" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/Chat";
+			repositoryURL = "https://github.com/EnesKaraosman/SwiftyChat";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CC91E5CF2A7C38C2007810E8 /* Chat */ = {
+		CC91E5D42A7E5E3B007810E8 /* SwiftyChat */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CC91E5CE2A7C38C2007810E8 /* XCRemoteSwiftPackageReference "Chat" */;
-			productName = Chat;
+			package = CC91E5D32A7E5E3B007810E8 /* XCRemoteSwiftPackageReference "SwiftyChat" */;
+			productName = SwiftyChat;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

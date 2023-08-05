@@ -1,48 +1,57 @@
 {
   "pins" : [
     {
-      "identity" : "activityindicatorview",
+      "identity" : "gsplayer",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/ActivityIndicatorView",
+      "location" : "https://github.com/wxxsw/GSPlayer.git",
       "state" : {
-        "revision" : "9970fd0bb7a05dad0b6566ae1f56937716686b24",
-        "version" : "1.1.1"
+        "revision" : "aa6dad7943d52f5207f7fcc2ad3e4274583443b8",
+        "version" : "0.2.26"
       }
     },
     {
-      "identity" : "chat",
+      "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/Chat",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
       "state" : {
-        "revision" : "4f80ff308964158721363a708de97cc9268c5749",
-        "version" : "1.0.3"
+        "revision" : "c75584ac759cbb16b204d0a7de3ebf53ea6b304d",
+        "version" : "7.9.0"
       }
     },
     {
-      "identity" : "floatingbutton",
+      "identity" : "swiftuiektensions",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/FloatingButton",
+      "location" : "https://github.com/EnesKaraosman/SwiftUIEKtensions.git",
       "state" : {
-        "revision" : "0fcbf6c1eed0450382fb8b0efd07f3d82a35da6d",
-        "version" : "1.1.5"
+        "revision" : "21421df3266c99b83992face9e1523c8f1acb924",
+        "version" : "0.2.0"
       }
     },
     {
-      "identity" : "mediapicker",
+      "identity" : "swiftychat",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/exyte/MediaPicker.git",
+      "location" : "https://github.com/EnesKaraosman/SwiftyChat",
       "state" : {
-        "revision" : "1e781e4f121b2ccab3260c213f96114061a209e7",
-        "version" : "1.2.4"
+        "revision" : "be42d39ba63c54c7c83015b23e6ea3ba6793a0ea",
+        "version" : "2.4.0"
       }
     },
     {
-      "identity" : "swiftui-introspect",
+      "identity" : "videoplayer",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/siteline/SwiftUI-Introspect.git",
+      "location" : "https://github.com/wxxsw/VideoPlayer.git",
       "state" : {
-        "revision" : "ccb973cfff703cba53fb88197413485c060eb26b",
-        "version" : "0.10.0"
+        "revision" : "3c5b9531ee20e34d3a86142ca2c076a5b99afdb2",
+        "version" : "1.2.3"
+      }
+    },
+    {
+      "identity" : "wrappinghstack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dkk/WrappingHStack.git",
+      "state" : {
+        "revision" : "f31b8fdc57759c5aa5fc98c70746db5556e73300",
+        "version" : "2.2.10"
       }
     }
   ],
